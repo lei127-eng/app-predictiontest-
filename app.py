@@ -8,7 +8,6 @@ app = Flask(__name__)
 -
 
 def fetch_api(url):
-    """Appel HTTP simple, retourne le JSON ou None."""
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "F1App/1.0"})
         with urllib.request.urlopen(req, timeout=10) as r:
@@ -243,5 +242,5 @@ def prediction():
 
 
 if __name__ == "__main__":
-    print("🏎️  F1 App — http://localhost:5000")
+    print("  F1 App — http://localhost:5000")
     app.run(debug=True)
